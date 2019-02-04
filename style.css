@@ -272,3 +272,7 @@ grid-area: job3;
     "job3";
     grid-template-columns: 1fr;
   }
+ /*Work Page*/
+  .projects{
+    grid-template-columns: 1fr;
+  }
