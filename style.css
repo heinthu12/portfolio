@@ -261,7 +261,7 @@ grid-area: job3;
     .menu-nav{
     height: 65vh;
     }
-  }
+  
 /*About-Page*/
   .about-info{
     grid-template-areas: 
@@ -276,3 +276,7 @@ grid-area: job3;
   .projects{
     grid-template-columns: 1fr;
   }
+    .boxes div{
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    }
