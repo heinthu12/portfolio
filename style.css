@@ -128,7 +128,7 @@ main {
   }
 
   .portrait {
-  width: 180px; /* 必要に応じてサイズ調整 (例: 80px や 120px) */
+  width: 100px; /* 必要に応じてサイズ調整 (例: 80px や 120px) */
   height: 120px;
   background: url('./portrait.jpg') no-repeat center center / cover; /* 中央配置 & 自動リサイズ */
   border-radius: 50%;
