@@ -105,13 +105,13 @@ main {
   float: left;
   overflow: hidden;
 }
-.menu-nav{
+.menu-nav {
   margin: 0;
   padding: 0;
   background: #333;
   list-style: none;
 }
-.menu .nav-link{
+.menu .nav-link {
   display: inline-block;
   position: relative;
   font-size: 30px;
@@ -120,44 +120,42 @@ main {
   text-decoration: none;
   font-weight: 400;
 }
-.nav-link:hover{
-  color : #eece1a;
+.nav-link:hover {
+  color: #eece1a;
 }
-.menu-branding{
-  background: #777;
-  }
 
-  .portrait {
-  width: 100px; /* 必要に応じてサイズ調整 (例: 80px や 120px) */
-  height: 120px;
-  background: url('./portrait.jpg') no-repeat center center / cover; /* 中央配置 & 自動リサイズ */
+.menu-branding {
+  background: #777;
+}
+
+.portrait {
+  width: 250px;
+  height: 250px;
+  background: url("./portrait.jpg");
   border-radius: 50%;
   border: 3px solid #eece1a;
 }
-  /* About Page */
-.about-info{
+/* ABOUT PAGE */
+.about-info {
   display: grid;
   grid-gap: 30px;
   grid-template-areas:
-  "bioimage bio bio"
-  "job1 job2 job3";
-  grid-template-columns: repeat(3,1fr);
-}* {
-  box-sizing: border-box;
+    "bioimage bio bio"
+    "job1 job2 job3";
+  grid-template-columns: repeat(3, 1fr);
 }
-
-#about{
+#about {
   max-width: 1440px;
   margin: auto;
 }
-.bio-title{
-  font-size:38px;
+.bio-title {
+  font-size: 38px;
 }
-.bio-img{
+.bio-img {
   grid-area: bioimage;
   margin: auto;
   border-radius: 50%;
-  border:3px solid #eece1a;
+  border: 3px solid #eece1a;
 }
 .bio{
   grid-area: bio;
@@ -165,120 +163,128 @@ main {
 }
 .job{
   margin-top: 50px;
-  background:#515151;
+  background: #515151;
+  padding: 0.5rem;
   border-bottom: 3px solid #eece1a;
   min-height: 300px;
 }
 .job-1{
-grid-area: job1;
+  grid-area: job1;
 }
 .job-2{
-grid-area: job2;
+  grid-area: job2;
 }
 .job-3{
-grid-area: job3;
+  grid-area: job3;
 }
-/*CONTANCT PAGE*/
+/*Contact Page*/
 .boxes{
   display: flex;
   justify-content: space-evenly;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
   margin-top: 3rem;
   align-items: center;
-
 }
 .boxes div{
- font-size: 32px;
- border: 3px solid #fff;
- margin-bottom: 3rem;
- padding: 1.5rem 2.5rem;
- transition: all 0.5s ease-out;
+  font-size: 2rem;
+  border: 3px solid #fff;
+  margin-bottom: 3rem;
+  padding: 1.5rem 2.5rem;
+  transition: all 0.5s ease-out;
 }
 .boxes div:hover{
-  padding:0.5rem 1.5rem;
+  padding: 0.5rem 1.5rem;
   background: #eece1a;
   color: #000;
 }
 .boxes div:hover span{
-  color: #000;
+  color:#000;
 }
-/* WORK */
-.projects{
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  grid-gap: 20px;
-  }
-  .projects img{
-  width: 100%;
-  border: 3px solid #ccc;
-  }
-  .project-title{
+
+.project-title{
   text-align: center;
   font-size: 20px;
+}
+
+/* Work Page */
+.projects{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+.projects img{
+  width: 100%;
+  border: 3px solid #aaa;
   margin-bottom: 8px;
-  }
-  .item a{
+}
+.item a{
   margin-left: 10px;
   display: block;
-  }
-  .item i{
+}
+.item i{
   margin: 0 10px;
-  }
-  .work-btn{
+}
+.work-btn{
   padding: 6px 8px;
   margin-bottom: 6px;
-  }
-  .work-btn:hover{
+}
+.work-btn:hover{
   background: #eece1a;
-  }
-  .btn-dark{
+}
+.btn-dark{
   background: #000;
-  }
-  .btn-light{
+}
+.btn-light{
   background: #ccc;
   color: #333;
+}
+@media(max-width:500px){
+  main{
+    align-items: center;
+    text-align: center;
   }
-  @media(max-width: 500px){
-    main{
-      align-items: center;
-      text-align: center;
-    }
-    .lg-heading{
-      line-height: 1;
-      margin-bottom: 1rem;
-    }
-    main#home h1{
-    margin-top: 10vh;
-    }
-    .menu-nav,
-    .menu-branding{
-    float: none;
-    width: 100%;
-    }
-    .menu-branding{
-    height:35vh;
-    }
-    .menu-nav{
-    height: 65vh;
-    }
-  
-/*About-Page*/
-  .about-info{
-    grid-template-areas: 
+
+.lg-heading{
+  line-height: 1;
+  margin-bottom: 1rem;
+
+}
+main#home h1{
+  margin-top: 10vh;
+}
+.menu-nav,.menu-branding{
+  float: none;
+  width: 100%;
+}
+.menu-branding{
+  height: 35vh;
+}
+.menu-nav{
+  height: 65vh;
+}
+ /* ABOUT ME PAGE */
+ .about-info{
+   grid-template-areas:
     "bioimage"
     "bio"
     "job1"
     "job2"
     "job3";
     grid-template-columns: 1fr;
-  }
- /*Work Page*/
-  .projects{
-    grid-template-columns: 1fr;
-  }
-   .boxes div{
-    font-size: 1.5rem;
-    padding: 1rem 2rem;
-    }
-    }
-    
+ }
+ /* WORK PAGE */
+ .projects{
+   grid-template-columns: 1fr;
+ }
+ .project-title{
+   font-size: 16px;
+ }
+ /* CONTACT PAGE */
+ .lg-heading{font-size: 5rem;
+
+ }
+ .boxes div{
+   font-size: 1.5rem;
+   padding: 1rem 2rem;
+ }
+}
